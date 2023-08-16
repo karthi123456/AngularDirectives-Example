@@ -1,0 +1,58 @@
+<h1>ngSwitch Example</h1>
+<label>Type Number</label>
+<input type="text" [(ngModel)] = "num">
+<div [ngSwitch]="num">
+    <div *ngSwitchCase="0">Zero</div>
+    <div *ngSwitchCase="1">One</div>
+    <div *ngSwitchCase="2">Two</div>
+    <div *ngSwitchCase="3">Three</div>
+    <div *ngSwitchCase="4">Four</div>
+</div>
+<br>
+<h1>ngIf Example</h1>
+<div class="row"> 
+    <label>Check Box</label>
+    <input type="checkbox" [(ngModel)] ="isVisible">
+</div>
+<p *ngIf="isVisible; else elseBlock">CheckBox is Checked</p>
+
+<ng-template #elseBlock>
+    <p>CheckBox is UnChecked</p>
+</ng-template>
+
+<h1>ngIf else and then Example</h1>
+<div class="row"> 
+    <label>Check Box</label>
+    <input type="checkbox" [(ngModel)] ="isVisible">
+</div>
+<div *ngIf="isVisible then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <p>CheckBox is Checked</p>
+</ng-template>
+<ng-template #elseBlock>
+    <p>CheckBox is UnChecked</p>
+</ng-template>
+<br>
+<h1>ngClass Example</h1>
+Enable Red <input type="checkbox" [(ngModel)] = "enableRed">
+Enable Big <input type="checkbox" [(ngModel)] = "enableBig">
+<div [ngClass]="{'primary':enableRed,
+                'big': enableBig}">
+    Sample Text
+</div>
+<br>
+<h1>ngStyle Example</h1>
+<div [ngStyle]="{'color':status=='error'?'red':'blue'}">
+    Sample Text
+</div>
+<br>
+Type Color: <input type="text" [(ngModel)]="color">
+<div [ngStyle]="{'backgroundColor':color}">
+    Sample Text
+</div>
+
+<br>
+<h1>Custom Directive Example</h1>
+<p CustomDirective>Sample Text1</p>
+<p CustomDirective>Sample Text2</p>
