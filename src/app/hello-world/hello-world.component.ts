@@ -12,4 +12,8 @@ export class HelloWorldComponent {
  enableBig = true;
  status = 'error';
  color = 'purple';
+
+ todayDate = new Date();
+ message = "Welcome to Angular pipe example";
+ currencyValue = 550;
 }

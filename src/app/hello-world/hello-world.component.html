@@ -56,3 +56,39 @@ Type Color: <input type="text" [(ngModel)]="color">
 <h1>Custom Directive Example</h1>
 <p CustomDirective>Sample Text1</p>
 <p CustomDirective>Sample Text2</p>
+
+<br>
+<h1>Date - Pipes Example</h1>
+<p>un-formatted Date: {{todayDate}}</p>
+<p>formatted Date: {{todayDate|date}}</p>
+<p>medium: {{todayDate|date: 'medium'}}</p>
+<p>short: {{todayDate|date: 'short'}}</p>
+<p>fulldate: {{todayDate|date: 'fullDate'}}</p>
+<p>longdate: {{todayDate|date: 'longDate'}}</p>
+
+<p>other date format using this link: 
+    <a href="https://angular.io/api/common/DatePipe" target="_blank">Click Here!</a>
+</p>
+
+<br>
+<h1>UpperCase and LowerCase - Pipes Example</h1>
+<p><b>Original Text:</b> {{message}}</p>
+<p><b>UpperCase Text:</b> {{message|uppercase}}</p>
+<p><b>LowerCase Text:</b> {{message|lowercase}}</p>
+
+<br>
+<h1>Slice - Pipes Example</h1>
+<p><b>Original Text:</b> {{message}}</p>
+<p><b>Slice Text Example1:</b> {{message|slice:11:20}}</p>
+<p><b>Slice Text Example2:</b> {{message|slice:-7}}</p>
+<p><b>Slice Text Example3:</b> {{message|slice:0:7}}</p>
+
+<br>
+<h1>Slice - Pipes Example</h1>
+<p><b>Price without formatter:</b> {{currencyValue}}</p>
+<p><b>Price with formatter:</b> {{currencyValue|currency}}</p>
+<p><b>Price with Indian symbol formatter:</b> {{currencyValue|currency:'INR'}}</p>
+<p><b>Price with Indian formatter:</b> {{currencyValue|currency:'INR':false}}</p>
+<p>other pipe format using this link: 
+    <a href="https://angular.io/guide/pipes" target="_blank">Click Here!</a>
+</p>
